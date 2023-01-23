@@ -1,10 +1,16 @@
 
-/*
-  REMOVE COMMENTS BEFORE SUBMITTING YOUR HOMEWORK
-*/
+
 
 // Import inquirer
+
+const inquirer = require("inquirer");
+
 // Optional: import asciiart-logo
+
+const logo = require("asciiart-logo");
+
+
+
 // import your database module
 const db = require("./db");
 
