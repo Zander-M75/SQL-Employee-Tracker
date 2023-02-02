@@ -5,14 +5,17 @@
 
 const inquirer = require("inquirer");
 
-// Optional: import asciiart-logo
+//  import asciiart-logo
 
 const logo = require("asciiart-logo");
 
 
 
-// import your database module
+// import  database module
 const db = require("./db");
+
+// import SQL connection module
+const connection = require("./db/connection");
 
 // Import console table for logging information on screen in table format
 require("console.table");
