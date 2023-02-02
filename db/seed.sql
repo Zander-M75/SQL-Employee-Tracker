@@ -1,6 +1,6 @@
 -- USE your_database;
 
-USE employee_tracker_db;
+USE company_db;
 
 -- INSERT INTO your_table_for_departments
 
