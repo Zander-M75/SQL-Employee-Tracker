@@ -79,7 +79,7 @@ function viewEmployees() {
 }
 
 function viewRoles() {
-  db.query(`SELECT * FROM roles`, (err, res) => {
+  db.query(`SELECT * FROM role`, (err, res) => {
     if (err) throw err;
     console.table(res);
     loadMainPrompts();
@@ -118,7 +118,7 @@ function addRole() {
     { type: "input", name: "salary", message: "What is the salary of the role?" },
     { type: "input", name: "department_id", message: "What is the department id of the role?" }
   ]).then((val) => {
-    const sql = `INSERT INTO roles (title, salary, department_id) VALUES (?,?,?)`;
+    const sql = `INSERT INTO role (title, salary, department_id) VALUES (?,?,?)`;
     const params = [val.title, val.salary, val.department_id];
 
     db.query(sql, params, (err, result) => {
@@ -165,7 +165,7 @@ function updateEmployeeRole() {
         choices: employees,
       },
     ]).then((employeeAnswer) => {
-      db.query(`SELECT * FROM roles`, (err, res) => {
+      db.query(`SELECT * FROM role`, (err, res) => {
         if (err) throw err;
 
         const roles = res.map((role) => ({
